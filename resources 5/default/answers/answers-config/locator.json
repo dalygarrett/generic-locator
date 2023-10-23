@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.yext.com/config/answers/answers-config/v1",
+  "$id": "locator",
+  "name": "Locator",
+  "supportedLocales": [],
+  "countryRestrictions": [],
+  "verticals": {
+    "locations": {
+      "directAnswers": {
+        "fieldValues": {
+          "eligibleFields": [
+            "mainPhone",
+            "address"
+          ],
+          "predictionMode": "CLASSIFIER"
+        }
+      },
+      "entityTypes": [
+        "location"
+      ],
+      "name": "Locations",
+      "searchableFields": {
+        "builtin.entityType": {
+          "nlpFilter": true
+        },
+        "builtin.hours": {
+          "nlpFilter": true
+        },
+        "builtin.location": {
+          "nlpFilter": true
+        },
+        "keywords": {
+          "nlpFilter": true
+        },
+        "name": {
+          "textSearch": true
+        }
+      },
+      "sortBys": [],
+      "source": "YEXT"
+    }
+  },
+  "localizations": {},
+  "additionalSearchablePlaces": [],
+  "querySuggestions": {
+    "disablePopularQueries": false,
+    "verticalPromptsOnEmpty": false,
+    "popularQueriesBlacklistedTerms": [],
+    "popularQueriesBlacklistedRegex": [],
+    "universalPrompts": [
+      "Locations near me"
+    ],
+    "verticalPrompts": {
+      "locations": [
+        "Locations near [[address.city]]",
+        "Locations near [[address.region]]"
+      ]
+    }
+  }
+}
